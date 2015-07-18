@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="portfolio">
+<head>
+	<title>Ryan Wilson's Portofolio</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href='css/style.css' type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="container-fluid">
+			<nav>
+				<ul id="main-nav" class="pull-left">
+					<li><a href="#">Home</a></li>
+					<li><a href="#skillsContent">Skills</a></li>
+					<li><a href="#projectsContent">Portfolio</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<div class="pull-right quick-links">
+					<div class="header-name">
+						<span>ryan wilson</span>
+					</div>
+					<div class="header-social">
+						<a href="https://www.linkedin.com/in/ryanwilson801"><img src="images/linkedin.png"></a>
+						<a href="https://github.com/ryanadamwilson"><img src="images/github.png"></a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div id="introContent">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12">
+						<h1 id="title">Ryan Wilson | Front End Developer</h1>	
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<p class="intro-text">I am a front end developer passionate about building modern and responsive websites.</p>
+						<div class="intro-port" onClick="portfolioBtn();">Check out some cool things I've built</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="skillsContent">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 col-md-6 pull-right skills">
+						<h2 class="contentHeader">Skills</h2>
+						<p>I create websites using HTML, CSS, and JavaScript. I most often prefer to work with WordPress, but am I also capable of using any content management system. I additionally focus on responsive design to ensure my sites work well on any screen size and device.</p>
+						<!--<p>I also offer copywriting, proofreading and editing as well as content management services.</p>
+						<p>My role in the creation of your web presence can be anything from a one-time meeting to an ongoing experience with continuous support.</p>-->
+						<p>My Key Skills:</p>
+						<ul id="skillsList">
+							<li>HTML5</li>
+							<li>CSS3</li>
+							<li>JavaScript</li>
+							<li>jQuery</li>
+							<li>Angular.js</li>
+							<li>WordPress</li>
+							<li>Bootstrap</li>
+							<li>Responsive Design</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="projectsContent" ng-controller="PortfolioController as portfolio">
+			<div class="col-xs-12"><h2>Portfolio</h2></div>
+			<div class="row container-fluid" id="projects-module">
+				<div class="col-md-6 col-xs-12" ng-repeat="project in portfolio.allProjects">
+					<div class="ind-project">
+						<img class="project-img img-responsive" ng-src="{{project.image}}">
+						<div class="infoContain">
+							<div class="title">{{project.title}}</div>
+							<div class="project-desc">{{project.desc}}</div>
+							<div class="see-example"><a href="{{project.path}}">View Project</a></div>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="footer col-xs-12">
+			<p>&copy; 2015 Ryan Wilson. All Rights Reserved</p>
+		</div>
+	</footer>
+	<script src="scripts/angular.min.js"></script>
+	<script src="scripts/jquery-1.11.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="scripts/app.js"></script>
+</body>
+</html>
