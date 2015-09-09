@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="portfolio">
 <head>
-	<title>Ryan Wilson's Portofolio</title>
+	<title>Development/Design Portofolio | Ryan Wilson</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href='css/style.css' type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -14,8 +14,6 @@
 					<li><a href="#">Home</a></li>
 					<li><a href="#skillsContent">Skills</a></li>
 					<li><a href="#projectsContent">Portfolio</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
 				</ul>
 				<div class="pull-right quick-links">
 					<div class="header-name">
@@ -32,13 +30,13 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-xs-12">
-						<h1 id="title">Ryan Wilson | Front End Developer</h1>	
+						<h1 id="title">Ryan Wilson <span>| </span><br>Front End Developer</h1>	
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="intro-text">I am a front end developer passionate about building modern and responsive websites.</p>
-						<div class="intro-port" onClick="portfolioBtn();">Check out some cool things I've built</div>
+						<div class="intro-port" href="#projectsContent">Check out some cool things I've built</div>
 					</div>
 				</div>
 			</div>
@@ -75,7 +73,7 @@
 						<div class="infoContain">
 							<div class="title">{{project.title}}</div>
 							<div class="project-desc">{{project.desc}}</div>
-							<div class="see-example"><a href="{{project.path}}">View Project</a></div>
+							<div class="see-example"><a href="{{project.path}}" target="_blank">View Project</a></div>
 						</div> 
 					</div>
 				</div>

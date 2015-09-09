@@ -65,6 +65,9 @@ header {
     font-size: 50px;
     padding: 5px 0;
 }
+#title br {
+  display: none;
+}
 .intro-text {
     font-size: 40px;
     width: 860px;
@@ -236,9 +239,62 @@ footer{
   text-align: center;
   padding: 40px 0;
   margin-top: 50px;
+  overflow: hidden;
 }
 .footer {
 
 }
 
+@media screen and (max-width: 1023px) {
+
+  .intro-text {
+    width: 100%;
+    text-align: center;
+  }
+  #title br {
+    display: block;
+  }
+  #title span {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1023px) {
+
+
+}
+
+@media screen and (max-width: 767px) {
+
+  header {
+    position: absolute;
+  }
+  #main-nav {
+    display: none;
+  }
+  .quick-links {
+    padding-bottom: 8px;
+  }
+  .intro-port {
+    display: none;
+  }
+  #title {
+    font-size: 40px;
+  }
+  .intro-text {
+    font-size: 20px;
+  }
+  .skills {
+    text-align: center;
+  }
+  .ind-project {
+    margin: 10px 0;
+    min-width: 260px;
+    background: none;
+    padding: 0!important;
+  }
+  .project-desc {
+    display: none;
+  }
+}
 
